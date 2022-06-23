@@ -1,0 +1,6 @@
+wordpress
+.env
+ssl
+logs
+db-data
+.DS_Store

@@ -1,0 +1,15 @@
+{
+  "name": "wp-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker compose up -d",
+    "rebuild": "docker compose up -d --build",
+    "stop": "docker compose stop",
+    "teardown": "docker compose stop && docker compose rm -fv && docker network rm wp-wordpress && rm -rf ./wordpress && rm -rf ./db-data && rm -rf ./logs",
+    "postinstall": "docker compose run --rm wordpress post-install"
+  },
+  "keywords": [],
+  "author": "Amirul Ishak",
+  "license": "ISC"
+}
